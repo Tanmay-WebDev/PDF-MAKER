@@ -1,0 +1,252 @@
+ /* General Styles */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('https://source.unsplash.com/1920x1080/?minimal') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* File Upload */
+input {
+    display: none;
+}
+
+.custom-file-upload {
+    display: block;
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+    margin-bottom: 15px;
+}
+
+.custom-file-upload:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+    background: #1c7430;
+}
+
+/* Image Preview */
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.preview-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #ccc;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popIn 0.4s ease-in-out forwards;
+}
+
+.preview-img:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}
+
+/* Radio Buttons */
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.radio-btn {
+    flex: 1;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #ccc;
+}
+
+.radio-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.radio-btn:hover {
+    background: #0056b3;
+    color: white;
+    transform: scale(1.07);
+}
+
+/* Margin Selection */
+.margin-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.margin-btn {
+    flex: 1;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #ccc;
+}
+
+.margin-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+    box-shadow: 0px 0px 15px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.margin-btn:hover {
+    background: #0056b3;
+    color: white;
+    transform: scale(1.07);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .radio-btn, .margin-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .preview-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #333;
+    font-size: 14px;
+}
+
+/* Icon Image */
+.icon-img {
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
+    position: fixed;
+    top: 40px; /* Positioned at the top of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Made by */
+.made-by {
+    position: fixed;
+    bottom: 50px; /* Positioned at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #555;
+}
+
+/* Orientation Title */
+.orientation-title {
+    font-size: 13px;
+    text-decoration: underline;
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 10px;
+    text-align: left;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Maker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Icon Image -->
+    <img src="icon.png" alt="Icon" class="icon-img">
+
+    <div class="container">
+        <h2>📸 PDF Maker</h2>
+
+        <!-- File Upload Button -->
+        <label for="imageInput" class="custom-file-upload">📂 Select Images</label>
+        <input type="file" id="imageInput" accept="image/*" multiple>
+
+        <!-- Orientation Selection Title -->
+        <div class="orientation-title">Orientation</div>
+
+        <!-- Orientation Selection -->
+        <div class="radio-container">
+            <div class="radio-btn" id="portraitBtn" onclick="setOrientation('portrait')">📄 Portrait</div>
+            <div class="radio-btn" id="landscapeBtn" onclick="setOrientation('landscape')">🖼️ Landscape</div>
+        </div>
+
+        <!-- Margin Selection Title -->
+        <div class="orientation-title">Margin</div>
+
+        <!-- Margin Selection -->
+        <div class="margin-container">
+            <div class="margin-btn" id="noMarginBtn" onclick="setMargin('none')">No Margin</div>
+            <div class="margin-btn" id="smallMarginBtn" onclick="setMargin('small')">Small Margin</div>
+            <div class="margin-btn" id="bigMarginBtn" onclick="setMargin('big')">Big Margin</div>
+        </div>
+
+        <!-- Convert Button -->
+        <button class="btn" onclick="convertToPDF()">📄 Convert to PDF</button>
+
+        <!-- Image Preview -->
+        <div id="preview"></div>
+    </div>
+
+    <!-- Made by -->
+    <div class="made-by">Made by Tanmay Singh</div>
+
+    <!-- Footer -->
+    <footer>
+        PDF Maker App | © 2025 Tanmay Singh
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
